@@ -1,70 +1,107 @@
 
-Web Scraping de Vagas de Emprego com Flask
-Este projeto consiste em uma aplicação web desenvolvida em Flask para realizar web scraping no site Programa Thor (https://programathor.com.br/jobs) e extrair informações sobre vagas de emprego. A aplicação oferece endpoints para acessar essas informações de forma estruturada.
+<h4 align="center"> 
+  Web Scraping de Vagas de Emprego
+</h4>
+<p align="center">
+    <img alt="Status do Projeto" src="https://img.shields.io/badge/STATUS-CONCLU%C3%8DDO-brightgreen">
+</p>
+<p align="center">
+ <a href="#-sobre-o-projeto">Sobre</a> •
+ <a href="#-funcionalidades">Funcionalidades</a> •
+ <a href="#-layout">Layout</a> • 
+ <a href="#-endpoints-da-api">Endpoints da API</a> •
+ <a href="#-como-executar-o-projeto">Como Executar</a> • 
+ <a href="#-tecnologias-utilizadas">Tecnologias Utilizadas</a> • 
+ <a href="#-contribuidores">Contribuidores</a> • 
+ <a href="#-autor">Autor</a> • 
+ <a href="#user-content--licença">Licença</a>
+</p>
 
-Funcionalidades
-A aplicação oferece os seguintes endpoints:
+## 💻 Sobre o Projeto
 
-1. /vagas
-Este endpoint permite obter informações sobre as vagas de emprego disponíveis no Programa Thor. As informações retornadas incluem:
+📄 O projeto consiste em um web scraping para extrair vagas de emprego de um determinado site, fornecendo informações relevantes sobre as oportunidades disponíveis. Este projeto é desenvolvido para fins educacionais, visando a prática de web scraping e desenvolvimento de APIs simples.
 
-Nome da vaga
-Nome da empresa
-ID da vaga
-Localização
-Tipo de contrato
-Salário
-Nível da vaga
-Data de publicação
-Link da vaga
-Tipo de empresa
-Parâmetros de consulta:
-page: Número da página a ser consultada (opcional, padrão é 1).
-expertise: Especialidade da vaga (opcional).
-city: Cidade da vaga (opcional).
-Exemplos de Uso:
-Obter todas as vagas:
-bash
-Copy code
-GET /vagas
-Obter vagas em uma determinada página:
-bash
-Copy code
-GET /vagas?page=2
-Filtrar vagas por expertise:
-bash
-Copy code
-GET /vagas?expertise=Desenvolvimento%20Web
-Filtrar vagas por cidade:
-bash
-Copy code
-GET /vagas?city=São%20Paulo
-Instalação e Execução
-Para executar a aplicação localmente, siga os passos abaixo:
-
-Clone este repositório:
-bash
-Copy code
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-Instale as dependências:
-Copy code
-pip install -r requirements.txt
-Execute a aplicação:
-Copy code
-python app.py
-A aplicação estará disponível em http://localhost:5000.
-
-Observações
-Certifique-se de estar em conformidade com os termos de uso do site Programa Thor ao usar este aplicativo para web scraping.
-Este aplicativo é apenas um exemplo educacional e pode ser modificado para atender a diferentes necessidades ou integrado a outros sistemas.
-Contribuições
-Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests para melhorar este projeto.
+## ⚙️ Funcionalidades
+  - [x] Extração de vagas de emprego
+  - [x] Filtros de pesquisa
+  - [x] Visualização das informações das vagas
 
 
-Recursos Adicionais
-Flask
-Requests
-Beautiful Soup
-Urllib
-Contato
-Para mais informações, entre em contato via email: seu-email@example.com
+## 📤 Propiedades retornada:
+
+- [x] Nome da vaga
+- [x] Nome da empresa
+- [x] ID da vaga
+- [x] Localização
+- [x] Tipo de contrato
+- [x] Salário
+- [x] Nível da vaga
+- [x] Data de publicação
+- [x] Link da vaga
+- [x] Tipo de empresa
+
+## 🔢 Parâmetros de consulta:
+- [x] page: Número da página a ser consultada (opcional, padrão é 1).
+- [x] expertise: Especialidade da vaga (opcional).
+- [x] city: Cidade da vaga (opcional).
+
+
+## 🔗 Endpoints da API
+ - [x] Obter todas as vagas de emprego disponíveis
+```bash
+Método HTTP: GET
+Endpoint: /vagas
+```
+
+- [x] Obter vagas de emprego disponíveis em uma cidade específica
+```bash
+Método HTTP: GET
+Endpoint: /vagas?city={nome_da_cidade}
+Exemplo de uso: /vagas?city=sao-paulo
+```
+
+- [x] Obter vagas de emprego disponíveis em uma área de expertise específica
+```bash
+Método HTTP: GET
+Endpoint: /vagas?expertise={area_de_expertise}
+Exemplo de uso: /vagas?expertise=python
+```
+
+- [x] Obter vagas de emprego disponíveis em uma página específica
+```bash
+Método HTTP: GET
+Endpoint: /vagas?page={numero_da_pagina}
+Exemplo de uso: /vagas?page=2
+```
+
+- [x] Obter vagas de emprego disponíveis com filtro de cidade e área de expertise
+```bash
+Método HTTP: GET
+Endpoint: /vagas?city={nome_da_cidade}&expertise={area_de_expertise}
+Exemplo de uso: /vagas?city=sao-paulo&expertise=python
+```
+## 🛣️ Como Executar o Projeto
+Pré-requisitos
+Antes de iniciar, verifique se você atende aos seguintes requisitos:
+Python 3.x instalado em sua máquina.
+
+## 🧭 Rodando o Projeto
+```bash
+#Clone este repositório:
+$ git clone https://github.com/moabesouza/ApiVagasEmpregoDevPython
+
+```
+🛠 Tecnologias Utilizadas
+As seguintes ferramentas foram usadas na construção do projeto:
+
+  - [x] Python
+  - [x] Beautiful Soup (biblioteca Python para web scraping)
+  - [x] Flask (para a criação da API)
+
+## 💪 Como contribuir para o projeto
+
+1. Faça um **fork** do projeto.
+2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
+3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "feature: My new feature"`
+4. Envie as suas alterações: `git push origin my-feature`
+> Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](./CONTRIBUTING.md)
